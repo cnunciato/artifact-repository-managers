@@ -1,6 +1,6 @@
 providers:
     - name: JFrog Artifactory
-      url: https://example.com
+      docs: https://jfrog.com/artifactory/
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -36,7 +36,7 @@ providers:
         - huggingface
 
     - name: Sonatype Nexus
-      url: https://example.com
+      docs: https://help.sonatype.com/en/sonatype-nexus-repository.html
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -63,7 +63,7 @@ providers:
         - huggingface
 
     - name: Cloudsmith
-      url: https://example.com
+      docs: https://help.cloudsmith.io/docs/welcome-to-cloudsmith-docs
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -91,7 +91,7 @@ providers:
         - conda
 
     - name: Buildkite Package Registries
-      url: https://example.com
+      docs: https://buildkite.com/docs/package-registries
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -109,7 +109,7 @@ providers:
         - huggingface
 
     - name: AWS CodeArtifact
-      url: https://example.com
+      docs: https://docs.aws.amazon.com/codeartifact/
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -121,7 +121,7 @@ providers:
         - generic-files
 
     - name: Azure Artifacts
-      url: https://example.com
+      docs: https://learn.microsoft.com/en-us/azure/devops/artifacts/?view=azure-devops
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -131,7 +131,7 @@ providers:
         - generic-files
 
     - name: Google Cloud Artifact Registry
-      url: https://example.com
+      docs: https://cloud.google.com/artifact-registry/docs
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -144,7 +144,7 @@ providers:
         - kubeflow
 
     - name: GitHub Packages
-      url: https://example.com
+      docs: https://docs.github.com/en/packages
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -154,7 +154,7 @@ providers:
         - docker-oci
 
     - name: GitLab Packages
-      url: https://example.com
+      docs: https://docs.gitlab.com/user/packages/
       supportedRepoTypes: 
         - node-npm
         - python-pypi
