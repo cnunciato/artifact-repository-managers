@@ -2,6 +2,10 @@
 
 https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/
 
+# It lives here
+
+https://package-managers.pages.dev/
+
 # Astro Starter Kit: Basics
 
 ```sh
