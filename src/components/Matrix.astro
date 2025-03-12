@@ -13,7 +13,7 @@ const data = yaml.load(fileContent);
             {
                 data.providers.map((provider: any) => (
                     <div class="table-cell text-center font-bold p-4 border-b border-gray-300 bg-gray-100">
-                        <a href={provider.docs} class="text-blue-800 underline">{ provider.name }</a>
+                        <a href={provider.docs} class="text-blue-800 underline" target="_blank">{ provider.name }</a>
                     </div>
                 ))
             }
