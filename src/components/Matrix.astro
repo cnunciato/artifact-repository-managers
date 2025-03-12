@@ -1,0 +1,39 @@
+--- 
+import fs from "node:fs";
+import yaml from 'js-yaml';
+
+const fileContent = fs.readFileSync('src/data/providers.yml', 'utf8');
+const data = yaml.load(fileContent);
+---
+
+<div class="table w-full text-sm">
+    <div class="table-header-group">
+        <div class="table-row bg-gray-200">
+            <div class="table-cell p-2">Repository Type</div>
+            {
+                data.providers.map((provider: any) => (
+                    <div class="table-cell text-center">{ provider.name }</div>
+                ))
+            }
+        </div>
+    </div>
+    <div class="table-row-group">
+        {  
+            Object.keys(data.repoTypes).map((key: any) => {
+                const repoType = data.repoTypes[key];
+
+                return <div class="table-row">
+                    <div class="table-cell p-2">{ repoType.name }</div>
+                    {
+                        data.providers.map((provider: any) => {
+                            return <div class="table-cell text-center">
+                                { provider.supportedRepoTypes.includes(key) && "✅" }
+                            </div>;
+                        })
+                    }
+                </div>
+            })
+        }
+    </div>
+</div>
+

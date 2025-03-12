@@ -1,3 +1,7 @@
+# Created with 
+
+https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/
+
 # Astro Starter Kit: Basics
 
 ```sh

@@ -1,0 +1,240 @@
+providers:
+    - name: JFrog Artifactory
+      url: https://example.com
+      supportedRepoTypes: 
+        - node-npm
+        - python-pypi
+        - go-proxy
+        - jvm-maven
+        - jvm-ivy  
+        - dotnet-nuget
+        - dotnet-chocolatey
+        - powershell-nuget
+        - ruby-rubygems
+        - swift-spm
+        - objective-c-cocoapods
+        - rust-cargo
+        - docker-oci
+        - helm-v3-oci
+        - debian-apt
+        - redhat-rpm
+        - alpine-apk
+        - terraform-modules
+        - generic-files
+        - cpp-conan
+        - r-cran
+        - php-composer
+        - dart-pub
+        - ansible
+        - chef
+        - puppet
+        - git-lfs
+        - eclipse-p2
+        - vagrant-vbox
+        - conda
+        - opkg
+        - huggingface
+
+    - name: Sonatype Nexus
+      url: https://example.com
+      supportedRepoTypes: 
+        - node-npm
+        - python-pypi
+        - go-proxy
+        - jvm-maven
+        - dotnet-nuget
+        - dotnet-chocolatey
+        - powershell-nuget
+        - ruby-rubygems
+        - objective-c-cocoapods
+        - rust-cargo
+        - docker-oci
+        - helm-v3-oci
+        - helm-http
+        - debian-apt
+        - redhat-rpm
+        - generic-files
+        - cpp-conan
+        - r-cran
+        - php-composer
+        - git-lfs
+        - eclipse-p2
+        - conda
+        - huggingface
+
+    - name: Cloudsmith
+      url: https://example.com
+      supportedRepoTypes: 
+        - node-npm
+        - python-pypi
+        - go-proxy
+        - jvm-maven
+        - dotnet-nuget
+        - dotnet-chocolatey
+        - powershell-nuget
+        - ruby-rubygems
+        - objective-c-cocoapods
+        - rust-cargo
+        - docker-oci
+        - debian-apt
+        - redhat-rpm
+        - alpine-apk
+        - terraform-modules
+        - generic-files
+        - cpp-conan
+        - r-cran
+        - php-composer
+        - dart-pub
+        - lua-luarocks
+        - vagrant-vbox
+        - erlang-hex
+        - conda
+
+    - name: Buildkite Package Registries
+      url: https://example.com
+      supportedRepoTypes: 
+        - node-npm
+        - python-pypi
+        - jvm-maven
+        - dotnet-nuget
+        - ruby-rubygems
+        - docker-oci
+        - helm-v3-oci
+        - helm-http
+        - debian-apt
+        - redhat-rpm
+        - alpine-apk
+        - terraform-modules
+        - generic-files
+        - huggingface
+
+    - name: AWS CodeArtifact
+      url: https://example.com
+      supportedRepoTypes: 
+        - node-npm
+        - python-pypi
+        - jvm-maven
+        - dotnet-nuget
+        - ruby-rubygems
+        - swift-spm
+        - rust-cargo
+        - generic-files
+
+    - name: Azure Artifacts
+      url: https://example.com
+      supportedRepoTypes: 
+        - node-npm
+        - python-pypi
+        - dotnet-nuget
+        - powershell-nuget
+        - rust-cargo
+        - generic-files
+
+    - name: Google Cloud Artifact Registry
+      url: https://example.com
+      supportedRepoTypes: 
+        - node-npm
+        - python-pypi
+        - go-proxy
+        - jvm-maven
+        - docker-oci
+        - debian-apt
+        - redhat-rpm
+        - generic-files
+        - kubeflow
+
+    - name: GitHub Packages
+      url: https://example.com
+      supportedRepoTypes: 
+        - node-npm
+        - python-pypi
+        - jvm-maven
+        - dotnet-nuget
+        - ruby-rubygems
+        - docker-oci
+
+    - name: GitLab Packages
+      url: https://example.com
+      supportedRepoTypes: 
+        - node-npm
+        - python-pypi
+        - jvm-maven
+        - dotnet-nuget
+        - powershell-nuget
+        - ruby-rubygems
+        - generic-files
+
+repoTypes:
+    node-npm: 
+        name: Node.js (npm)
+    python-pypi: 
+        name: Python (PyPI)
+    go-proxy: 
+        name: Go (VCS proxy)
+    jvm-maven: 
+        name: Java (Maven)
+    jvm-ivy: 
+        name: Java (Ivy)
+    dotnet-nuget: 
+        name: .NET (Nuget)
+    dotnet-chocolatey: 
+        name: .NET (Chocolatey)
+    powershell-nuget: 
+        name: Powershell
+    ruby-rubygems: 
+        name: Rubygems
+    swift-spm: 
+        name: Swift (SPM)
+    objective-c-cocoapods: 
+        name: Objective-C (Cocoapods)
+    rust-cargo: 
+        name: Rust (Cargo)
+    docker-oci: 
+        name: Docker (OCI)
+    helm-v3-oci: 
+        name: Helm v3 (OCI)
+    helm-http: 
+        name: Helm (HTTP)
+    debian-apt: 
+        name: Debian/Ubuntu (apt)
+    redhat-rpm: 
+        name: RedHat (rpm)
+    alpine-apk: 
+        name: Alpine (apk)
+    terraform-modules: 
+        name: Terraform
+    generic-files: 
+        name: Generic files
+    cpp-conan: 
+        name: C++ (Conan)
+    r-cran: 
+        name: R (CRAN)
+    php-composer: 
+        name: PHP (Composer)
+    dart-pub: 
+        name: Dart
+    lua-luarocks: 
+        name: Lua
+    ansible: 
+        name: Ansible
+    chef: 
+        name: Chef
+    puppet: 
+        name: Puppet
+    git-lfs: 
+        name: Git LFS
+    eclipse-p2: 
+        name: Eclipse Plugins (p2)
+    vagrant-vbox: 
+        name: Vagrant (box)
+    erlang-hex: 
+        name: Erlang (Hex)
+    kubeflow: 
+        name: Kubeflow
+    conda: 
+        name: Conda
+    opkg: 
+        name: Opkg
+    huggingface: 
+        name: Huggingface
+
