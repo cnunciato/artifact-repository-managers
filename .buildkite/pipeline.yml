@@ -1,3 +1,4 @@
 steps:
   - commands: 
+      - npm install
       - npm run deploy
