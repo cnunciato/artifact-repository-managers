@@ -1,4 +1,4 @@
-[![Build status](https://badge.buildkite.com/28b43f708fead6eaab58dd74446b44008815640679bdef57b7.svg)](https://buildkite.com/nunciato/package-managers)
+[![Build status](https://badge.buildkite.com/28b43f708fead6eaab58dd74446b44008815640679bdef57b7.svg?branch=main)](https://buildkite.com/nunciato/package-managers)
 
 # Created with 
 
