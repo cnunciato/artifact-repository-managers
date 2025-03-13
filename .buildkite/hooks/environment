@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-set -euo pipefail
-
-export CLOUDFLARE_API_TOKEN="$(buildkite-agent secret get CLOUDFLARE_API_TOKEN)"
