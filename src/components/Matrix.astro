@@ -8,23 +8,23 @@ const data = yaml.load(fileContent);
 
 <style>
   .matrix-table .table-row:hover > * {
-    background-color: color-mix(in oklab, var(--foreground) 5%, transparent);
+    background-color: color-mix(in oklab, var(--foreground) 5%, var(--background));
   }
 </style>
 
-<div class="matrix-table table table-fixed w-full text-sm relative">
-  <div class="table-header-group z-10 bg-background sticky top-0">
+<div class="matrix-table table table-fixed w-full text-sm relative" style="min-width:1700px">
+  <div class="table-header-group z-20 bg-background sticky top-0">
     <div class="table-row">
       <div
-        class="table-cell w-56 p-3 border-b border-divider border-r sticky left-0 bg-background"
+        class="table-cell w-56 p-3 border-b border-divider sticky left-0 z-30 border-r bg-background"
       >
       </div>
       {
         data.providers.map((provider: any) => (
-          <div class="table-cell align-bottom text-center px-0.5 py-1 border-b border-divider">
+          <div class="table-cell align-bottom text-balance text-center px-0.5 py-1 border-b border-divider">
             <a
               href={provider.docs}
-              class="text-foreground hover:text-link-foreground"
+              class="text-foreground tracking-tight hover:text-link-foreground"
               target="_blank"
             >
               {provider.name}
@@ -41,7 +41,7 @@ const data = yaml.load(fileContent);
 
         return (
           <div class="table-row">
-            <div class="table-cell p-2 font-semibold border-b border-divider border-r sticky left-0 bg-background">
+            <div class="table-cell p-2 font-medium border-b border-divider border-r sticky left-0 bg-background z-10 isolate">
               {repoType.name}
             </div>
             {data.providers.map((provider: any) => {
