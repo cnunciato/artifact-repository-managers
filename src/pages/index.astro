@@ -1,7 +1,6 @@
 ---
-import Matrix from '../components/Matrix.astro';
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Matrix from "../components/Matrix.astro";
+import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -9,10 +8,16 @@ import "../styles/global.css";
 ---
 
 <Layout>
-	<!-- <Welcome /> -->
-	<div class="mb-8">
-		<h1 class="text-2xl mb-4">All the package managers!</h1>
-		Sourced from <a href="https://github.com/cnunciato/package-managers" class="text-blue-600" target="_blank">https://github.com/cnunciato/package-managers</a> ↗
-	</div>
-	<Matrix />
+  <div class="p-3">
+    <h1 class="text-base text-primary-foreground font-bold tracking-tight">
+      All the package managers!
+    </h1>
+    <p class="text-sm">
+      Sourced from <a
+        href="https://github.com/cnunciato/package-managers"
+        class="transition-colors hover:text-link-foreground underline decoration-link-foreground/50"
+        target="_blank">github.com/cnunciato/package-managers</a>
+    </p>
+  </div>
+  <Matrix />
 </Layout>

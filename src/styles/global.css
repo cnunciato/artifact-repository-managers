@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+html {
+  @apply antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-feature-settings: 'ss06' on, 'ss07' on;
+}
+
+:root {
+  --background: oklch(0.97 0.001 106.424);
+  --foreground: oklch(0.268 0.007 34.298);
+  --link-foreground: oklch(0.588 0.158 241.966);
+  --primary-foreground: oklch(0.147 0.004 49.25);
+  --divider: oklch(0.923 0.003 48.717);
+  --tick: oklch(0.432 0.095 166.913);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.87 0 0);
+  --link-foreground: oklch(0.5 0.134 242.749);
+  --primary-foreground: #fff;
+  --divider: oklch(0.269 0 0);
+  --tick: oklch(0.845 0.143 164.978);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-link-foreground: var(--link-foreground);
+  --color-divider: var(--divider);
+  --color-tick: var(--tick);
+}
