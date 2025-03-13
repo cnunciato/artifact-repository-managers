@@ -1,6 +1,6 @@
 steps:
   - commands: 
-      - export CLOUDFLARE_API_TOKEN="$(buildkite-agent secret get CLOUDFLARE_API_TOKENs)"
+      - export CLOUDFLARE_API_TOKEN="$(buildkite-agent secret get CLOUDFLARE_ACCOUNT_ID)"
       - echo "$CLOUDFLARE_API_TOKEN"
       - npm install
       - npm run deploy
