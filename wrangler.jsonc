@@ -4,7 +4,7 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "all-the-package-managers",
+	"name": "package-managers",
 	"compatibility_date": "2025-03-11",
 	"compatibility_flags": [
 		"nodejs_compat"
