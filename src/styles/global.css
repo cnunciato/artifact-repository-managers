@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
 html {
   @apply antialiased;
   text-rendering: optimizeLegibility;
@@ -23,7 +25,7 @@ body {
   --foreground: oklch(0.87 0 0);
   --link-foreground: oklch(0.5 0.134 242.749);
   --primary-foreground: #fff;
-  --divider: oklch(0.269 0 0);
+  --divider: oklch(0.205 0 0);
   --tick: oklch(0.845 0.143 164.978);
 }
 
