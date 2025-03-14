@@ -1,0 +1,50 @@
+---
+import fs from "node:fs";
+import yaml from 'js-yaml';
+
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+
+export async function getStaticPaths() {
+    const fileContent = fs.readFileSync('src/data/providers.yml', 'utf8');
+    const data = yaml.load(fileContent);
+
+    return Object.keys(data.repoTypes).map((type: any) => {
+        return {
+            params: {
+                slug: type,
+            },
+            props: {
+                repoType: {
+                    slug: type,
+                    name: data.repoTypes[type].name,
+                    providers: data.providers
+                        .filter((provider: any) => provider.supportedRepoTypes.includes(type))
+                        .map((provider: any) => {
+                            return {
+                                ...provider,
+                            };
+                        })
+                }
+            }
+        };
+    });
+}
+
+const { repoType } = Astro.props;
+---
+
+<Layout>
+	<div class="mb-8">
+		<h1 class="text-2xl mb-4">{`Which artifact repository managers support ${repoType.name}?`}</h1>
+        <p>The following <a class="underline text-blue-600" href="/">artifact repository managers</a> support {repoType.name}:</p>
+        <ul class="list-disc list-inside my-4">
+            {
+                repoType.providers.map((provider: any) => {
+                    return <li><a class="underline text-blue-600" href={`/what-is-${provider.slug}`}>{ provider.name }</a></li>;
+                })
+            }
+        </ul>
+	</div>
+    <p>&larr; <a class="underline text-blue-600" href="/">Back to the list</a></p>
+</Layout>
