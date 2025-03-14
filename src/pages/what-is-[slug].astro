@@ -40,7 +40,7 @@ const { provider } = Astro.props;
         <ul class="list-disc list-inside my-4">
             {
                 provider.supportedRepoTypes.map((type: any) => {
-                    return <li><a class="underline text-blue-600" href={`/which-artifact-managers-support-${type.slug}`}>{ type.name }</a></li>;
+                    return <li><a class="underline text-blue-600" href={`/which-artifact-repository-managers-support-${type.slug}`}>{ type.name }</a></li>;
                 })
             }
         </ul>
