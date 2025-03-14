@@ -1,5 +1,6 @@
 providers:
     - name: JFrog Artifactory
+      slug: jfrog-artifactory
       docs: https://jfrog.com/artifactory/
       supportedRepoTypes: 
         - node-npm
@@ -36,6 +37,7 @@ providers:
         - huggingface
 
     - name: Sonatype Nexus
+      slug: sonatype-nexus
       docs: https://help.sonatype.com/en/sonatype-nexus-repository.html
       supportedRepoTypes: 
         - node-npm
@@ -63,6 +65,7 @@ providers:
         - huggingface
 
     - name: Cloudsmith
+      slug: cloudsmith
       docs: https://help.cloudsmith.io/docs/welcome-to-cloudsmith-docs
       supportedRepoTypes: 
         - node-npm
@@ -91,6 +94,7 @@ providers:
         - conda
 
     - name: Buildkite Package Registries
+      slug: buildkite-package-registries
       docs: https://buildkite.com/docs/package-registries
       supportedRepoTypes: 
         - node-npm
@@ -109,6 +113,7 @@ providers:
         - huggingface
 
     - name: AWS CodeArtifact
+      slug: aws-codeartifact
       docs: https://docs.aws.amazon.com/codeartifact/
       supportedRepoTypes: 
         - node-npm
@@ -121,6 +126,7 @@ providers:
         - generic-files
 
     - name: Azure Artifacts
+      slug: azure-artifacts
       docs: https://learn.microsoft.com/en-us/azure/devops/artifacts/?view=azure-devops
       supportedRepoTypes: 
         - node-npm
@@ -131,6 +137,7 @@ providers:
         - generic-files
 
     - name: Google Cloud Artifact Registry
+      slug: google-cloud-artifact-registry
       docs: https://cloud.google.com/artifact-registry/docs
       supportedRepoTypes: 
         - node-npm
@@ -144,6 +151,7 @@ providers:
         - kubeflow
 
     - name: GitHub Packages
+      slug: github-packages
       docs: https://docs.github.com/en/packages
       supportedRepoTypes: 
         - node-npm
@@ -154,6 +162,7 @@ providers:
         - docker-oci
 
     - name: GitLab Packages
+      slug: gitlab-packages
       docs: https://docs.gitlab.com/user/packages/
       supportedRepoTypes: 
         - node-npm

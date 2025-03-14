@@ -1,0 +1,50 @@
+---
+import fs from "node:fs";
+import yaml from 'js-yaml';
+
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+
+export async function getStaticPaths() {
+    const fileContent = fs.readFileSync('src/data/providers.yml', 'utf8');
+    const data = yaml.load(fileContent);
+
+    return data.providers.map((provider: any) => {
+        return {
+            params: {
+                slug: provider.slug,
+            },
+            props: {
+                provider: {
+                    ...provider,
+                    supportedRepoTypes: provider.supportedRepoTypes.map((type: any) => {
+                        const repoType = data.repoTypes[type];
+                        return {
+                            name: data.repoTypes[type].name,
+                            slug: type,
+                        };
+                    })
+                }
+            }
+        };
+    });
+}
+
+const { provider } = Astro.props;
+---
+
+<Layout>
+	<div class="mb-8">
+		<h1 class="text-2xl mb-4">{`What is ${provider.name}?`}</h1>
+        <p>{provider.name} is an <a class="underline text-blue-600" href="/">artifact repository manager</a>. It supports the following repo/package types:</p>
+        <ul class="list-disc list-inside my-4">
+            {
+                provider.supportedRepoTypes.map((type: any) => {
+                    return <li><a class="underline text-blue-600" href={`/which-artifact-managers-support-${type.slug}`}>{ type.name }</a></li>;
+                })
+            }
+        </ul>
+	</div>
+    <p>You can learn more about {provider.name} <a href={provider.docs} class="underline text-blue-600" target="_blank">in their docs</a>!</p>
+    <p>&larr; <a class="underline text-blue-600" href="/">Back to the list</a></p>
+</Layout>
