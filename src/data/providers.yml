@@ -2,6 +2,9 @@ providers:
     - name: JFrog Artifactory
       slug: jfrog-artifactory
       docs: https://jfrog.com/artifactory/
+      hostingOptions:
+        - hosted`
+        - self-hosted
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -39,6 +42,8 @@ providers:
     - name: Sonatype Nexus
       slug: sonatype-nexus
       docs: https://help.sonatype.com/en/sonatype-nexus-repository.html
+      hostingOptions:
+        - self-hosted
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -67,6 +72,8 @@ providers:
     - name: Cloudsmith
       slug: cloudsmith
       docs: https://help.cloudsmith.io/docs/welcome-to-cloudsmith-docs
+      hostingOptions:
+        - hosted
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -96,6 +103,9 @@ providers:
     - name: Buildkite Package Registries
       slug: buildkite-package-registries
       docs: https://buildkite.com/docs/package-registries
+      hostingOptions:
+        - hosted
+        - hybrid
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -115,6 +125,8 @@ providers:
     - name: AWS CodeArtifact
       slug: aws-codeartifact
       docs: https://docs.aws.amazon.com/codeartifact/
+      hostingOptions:
+        - hosted
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -128,6 +140,8 @@ providers:
     - name: Azure Artifacts
       slug: azure-artifacts
       docs: https://learn.microsoft.com/en-us/azure/devops/artifacts/?view=azure-devops
+      hostingOptions:
+        - hosted
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -139,6 +153,8 @@ providers:
     - name: Google Cloud Artifact Registry
       slug: google-cloud-artifact-registry
       docs: https://cloud.google.com/artifact-registry/docs
+      hostingOptions:
+        - hosted
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -153,6 +169,9 @@ providers:
     - name: GitHub Packages
       slug: github-packages
       docs: https://docs.github.com/en/packages
+      hostingOptions:
+        - hosted
+        - self-hosted
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -164,6 +183,9 @@ providers:
     - name: GitLab Packages
       slug: gitlab-packages
       docs: https://docs.gitlab.com/user/packages/
+      hostingOptions:
+        - hosted
+        - self-hosted
       supportedRepoTypes: 
         - node-npm
         - python-pypi
@@ -171,6 +193,103 @@ providers:
         - dotnet-nuget
         - powershell-nuget
         - ruby-rubygems
+        - generic-files
+
+    - name: Pulp
+      slug: pulp
+      docs: https://pulpproject.org/user/
+      hostingOptions:
+        - self-hosted
+      supportedRepoTypes: 
+        - node-npm
+        - python-pypi
+        - ruby-rubygems
+        - ansible
+        - jvm-maven
+        - debian-apt
+        - generic-files
+
+    - name: Harbor
+      slug: harbor
+      docs: https://docs.starlingx.io/admintasks/kubernetes/harbor-as-system-app-1d1e3ec59823.html
+      hostingOptions:
+        - hosted
+      supportedRepoTypes: 
+        - docker-oci
+        - helm-v3-oci
+
+    - name: ProGet
+      slug: pro-get
+      docs: https://docs.inedo.com/docs/proget/overview
+      hostingOptions:
+        - self-hosted
+      supportedRepoTypes: 
+        - dotnet-nuget
+        - powershell-nuget
+        - ruby-rubygems
+        - jvm-maven
+        - node-npm
+        - dotnet-chocolatey
+        - debian-apt
+        - helm-v3-oci
+        - python-pypi
+        - redhat-rpm
+        - docker-oci
+        - generic-files
+
+    - name: Artipie
+      slug: artipie
+      docs: https://github.com/artipie/artipie
+      hostingOptions:
+        - self-hosted
+      supportedRepoTypes:       
+        - jvm-maven
+        - docker-oci
+        - ruby-rubygems
+        - go-proxy
+        - helm-oci
+        - node-npm
+        - dotnet-nuget
+        - php-composer
+        - python-pypi
+        - redhat-rpm
+        - debian-apt
+        - conda
+        - generic-files
+
+    - name: Codefresh
+      slug: codefresh
+      docs: https://octopus.com/docs/packaging-applications
+      hostingOptions:
+        - hosted
+      supportedRepoTypes: 
+        - docker-oci
+
+    - name: Quay.io
+      slug: quay-io
+      docs: https://docs.projectquay.io/quay_io.html
+      hostingOptions:
+        - hosted
+      supportedRepoTypes: 
+        - docker-oci
+
+    - name: Cloudrepo
+      slug: cloudrepo
+      docs: https://www.cloudrepo.io/docs/
+      hostingOptions:
+        - hosted
+      supportedRepoTypes: 
+        - python-pypi
+
+    - name: MyGet
+      slug: myget
+      docs: https://maartenba.gitbooks.io/myget-documentation/content/
+      hostingOptions:
+        - hosted
+      supportedRepoTypes: 
+        - node-npm
+        - dotnet-nuget
+        - jvm-maven
         - generic-files
 
 repoTypes:
@@ -246,4 +365,3 @@ repoTypes:
         name: Opkg
     huggingface: 
         name: Huggingface
-
