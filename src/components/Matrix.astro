@@ -14,7 +14,7 @@ const data = yaml.load(fileContent);
                 data.providers.map((provider: any) => (
                     <div class="table-cell text-center font-bold p-4 border-b border-gray-300 bg-gray-100">
                         {/* <a href={provider.docs} class="text-blue-800 underline" target="_blank">{ provider.name }</a> */}
-                        <a href={`/what-is-${provider.slug}`} class="text-blue-800 underline"><h3>{ provider.name }</h3></a>
+                        <a href={`/what-is-${provider.slug}`} class="text-blue-800 underline"><h3 class="whitespace-nowrap">{ provider.name }</h3></a>
                     </div>
                 ))
             }
@@ -26,7 +26,7 @@ const data = yaml.load(fileContent);
                 const repoType = data.repoTypes[key];
 
                 return <div class="table-row ">
-                    <div class="table-cell p-3 border-b border-gray-200 bg-gray-100">{ repoType.name }</div>
+                    <div class="table-cell p-3 border-b border-gray-200 bg-gray-100 whitespace-nowrap">{ repoType.name }</div>
                     {
                         data.providers.map((provider: any) => {
                             return <div class="table-cell text-center border-b border-gray-200">
