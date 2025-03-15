@@ -247,7 +247,7 @@ providers:
         - docker-oci
         - ruby-rubygems
         - go-proxy
-        - helm-oci
+        - helm-v3-oci
         - node-npm
         - dotnet-nuget
         - php-composer
